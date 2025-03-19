@@ -10,7 +10,7 @@ jobs:
         uses: juric1962/hello-world-composite-action@362cced60994f3c3f565425a863cf9dffa803bd2
         with:
           who-to-greet: 'Juric Demyanuk'
-      - run: echo random-number "$RANDOM_NUMBER"
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}                 # "$RANDOM_NUMBER"
         shell: bash
-        env:
-          RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
+      #  env:
+      #    RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
