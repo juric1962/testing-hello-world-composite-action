@@ -12,7 +12,7 @@ jobs:
           who-to-greet: 'Juric Demyanuk'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}                 # "$RANDOM_NUMBER"
         shell: bash
-        if: ${{ github.event_name == 'pull_request' }}
+        if: ${{ github.event_name == 'push' }}
         
       #  env:
       #    RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
