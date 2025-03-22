@@ -14,7 +14,7 @@ jobs:
           echo random-number ${{ steps.foo.outputs.random-number }}                 # "$RANDOM_NUMBER"
           echo "repository variable : ${{ vars.REPOSITORY_VAR }}"
           echo "secret : ${{ secrets.DOCKER_USERNAME }}"
-          shell: bash
+        shell: bash
         if: ${{ github.event_name == 'push' }}
         
       #  env:
