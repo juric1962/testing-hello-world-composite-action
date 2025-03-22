@@ -12,7 +12,7 @@ jobs:
           who-to-greet: 'Juric Demyanuk'
       - run: |
           echo random-number ${{ steps.foo.outputs.random-number }}                 # "$RANDOM_NUMBER"
-          echo "repository variable : $vars.REPOSITORY_VAR"
+          echo "repository variable : ${{ vars.REPOSITORY_VAR }}"
         shell: bash
         if: ${{ github.event_name == 'push' }}
         
