@@ -16,6 +16,6 @@ jobs:
           echo "secret : ${{ secrets.DOCKER_USERNAME }}"
         shell: bash
         if: ${{ github.event_name == 'push' }}
-        
+         
       #  env:
       #    RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
